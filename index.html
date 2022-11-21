@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music media player</title>
+
+    <!-- font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+
+    <!-- style file -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <i class="fas fa-bars"></i>
+      <marquee direction="rtl" behavior="alternate">
+        <h2 class="music-name">Select your favorite music</h2>
+      </marquee>
+
+      <section>
+        <div class="video-container">
+          <video autoplay poster="imgs/poster.jpg" src="">
+            <!-- <source  src="" /> -->
+          </video>
+
+          <div class="controls">
+            <input type="range" class="video-duration" min="0" value="0" />
+
+            <div class="video-times">
+              <span class="start-time"></span>
+              <span class="full-time"></span>
+            </div>
+            <i class="fa-solid fa-arrow-left" title="previous"></i>
+            <i class="fa-solid fa-pause insert" title="play & pause"></i>
+            <i class="fa-solid fa-arrow-right" title="next"></i>
+            <i class="fa-solid fa-volume-high volum" title="volum"></i>
+
+            <input
+              type="range"
+              class="value-range"
+              value=".2"
+              min="0"
+              max="1"
+              step=".1"
+            />
+
+            <i class="fa-solid fa-expand full-screen" title="full screen"></i>
+            <i class="fa-solid fa-music" title="select music">
+              <input type="file" class="select-music" />
+            </i>
+          </div>
+        </div>
+
+        <div class="menu">
+          <ul></ul>
+        </div>
+      </section>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
